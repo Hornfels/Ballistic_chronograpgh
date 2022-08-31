@@ -1,0 +1,92 @@
+[p GLOBOPT AUTOSTATIC IEEE_FLT IEEE_DBL LFSROK EMI_WORD ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 18F44K22 ]
+[d frameptr 4065 ]
+"4 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\fleq.c
+[v ___fleq __fleq `(b  1 e 0 0 ]
+"62 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\float.c
+[v ___ftpack __ftpack `(f  1 e 4 0 ]
+"86 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 4 0 ]
+"54 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\ftdiv.c
+[v ___ftdiv __ftdiv `(f  1 e 4 0 ]
+"62 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\ftmul.c
+[v ___ftmul __ftmul `(f  1 e 4 0 ]
+"19 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\ftsub.c
+[v ___ftsub __ftsub `(f  1 e 4 0 ]
+"10 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"245
+[v ___flsub __flsub `(d  1 e 4 0 ]
+"11 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\sprcdiv.c
+[v ___fldiv __fldiv `(d  1 e 4 0 ]
+"8 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\sprcmul.c
+[v ___flmul __flmul `(d  1 e 4 0 ]
+"15 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\Umul32.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+"91 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\Umul64.c
+[v ___omul __omul `(uo  1 e 8 0 ]
+"22 J:\mplab_projects\c_template.X\main.c
+[v _int0 int0 `IIH(v  1 e 1 0 ]
+"53
+[v _setup_timer_int setup_timer_int `(v  1 e 1 0 ]
+"69
+[v _main main `(v  1 e 1 0 ]
+"98 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f44k22.h
+[v _ANSELB ANSELB `VEuc  1 e 1 @3897 ]
+"7143
+[v _PORTD PORTD `VEuc  1 e 1 @3971 ]
+"8283
+[v _TRISB TRISB `VEuc  1 e 1 @3987 ]
+"8727
+[v _TRISD TRISD `VEuc  1 e 1 @3989 ]
+"16013
+[v _OSCCON OSCCON `VEuc  1 e 1 @4051 ]
+"18452
+[v _GIE GIE `VEb  1 e 0 @32663 ]
+"18548
+[v _INT0IE INT0IE `VEb  1 e 0 @32660 ]
+"18551
+[v _INT0IF INT0IF `VEb  1 e 0 @32657 ]
+"18596
+[v _INTEDG0 INTEDG0 `VEb  1 e 0 @32654 ]
+"18623
+[v _IPEN IPEN `VEb  1 e 0 @32391 ]
+"19313
+[v _PEIE PEIE `VEb  1 e 0 @32662 ]
+"19346
+[v _PSA PSA `VEb  1 e 0 @32427 ]
+"20003
+[v _T08BIT T08BIT `VEb  1 e 0 @32430 ]
+"20009
+[v _T0CS T0CS `VEb  1 e 0 @32429 ]
+"20027
+[v _T0SE T0SE `VEb  1 e 0 @32428 ]
+"20246
+[v _TMR0IE TMR0IE `VEb  1 e 0 @32661 ]
+"20249
+[v _TMR0IF TMR0IF `VEb  1 e 0 @32658 ]
+"20255
+[v _TMR0ON TMR0ON `VEb  1 e 0 @32431 ]
+"17 J:\mplab_projects\c_template.X\main.c
+[v _counter counter `i  1 e 2 0 ]
+"18
+[v _counter_prev counter_prev `i  1 e 2 0 ]
+"19
+[v _prev prev `i  1 e 2 0 ]
+"69
+[v _main main `(v  1 e 1 0 ]
+{
+"89
+} 0
+"53
+[v _setup_timer_int setup_timer_int `(v  1 e 1 0 ]
+{
+"67
+} 0
+"22
+[v _int0 int0 `IIH(v  1 e 1 0 ]
+{
+"41
+} 0

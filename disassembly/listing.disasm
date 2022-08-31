@@ -1,0 +1,77 @@
+Disassembly Listing for c_template
+Generated From:
+J:/mplab_projects/c_template.X/dist/default/production/c_template.X.production.elf
+9.3.2022 13:27:17
+
+---  J:/mplab_projects/c_template.X/main.c  -------------------------------------------------------------
+1:             /*
+2:              * File:   main.c
+3:              * Author: O. Pecak
+4:              *
+5:              * Created on February 15, 2022, 12:20 AM
+6:              */
+7:             #include <xc.h>
+8:             
+9:             // minimal config bits setup
+10:            #pragma config WDTEN = OFF
+11:            #pragma config FOSC = INTIO7
+12:            #pragma config MCLRE = EXTMCLR
+13:            #pragma config FCMEN = ON
+14:            
+15:            #define _XTAL_FREQ 16000
+16:            
+17:            void main(void) {
+18:                OSCCON = (OSCCON & 0b10001111) | 0b01110000; // internal oscillator at full speed (16 MHz)
+3FD2  50D3     MOVF OSCCON, W, ACCESS
+3FD4  0B8F     ANDLW 0x8F
+3FD6  0970     IORLW 0x70
+3FD8  6ED3     MOVWF OSCCON, ACCESS
+19:                
+20:                //you can delete this for your own code, this is simple showcase application
+21:                TRISB = 0xFF; //buttons input
+3FDA  6893     SETF TRISB, ACCESS
+22:                ANSELB = 0x00; //enable digital input buffer
+3FDC  0E00     MOVLW 0x0
+3FDE  010F     MOVLB 0xF
+3FE0  6F39     MOVWF 0x39, BANKED
+23:                
+24:                //disable global interrupts
+25:                GIE = 0;
+3FE2  9EF2     BCF INTCON, 7, ACCESS
+26:            
+27:                TRISD = 0x00; //LEDs output
+3FE4  0E00     MOVLW 0x0
+3FE6  6E95     MOVWF TRISD, ACCESS
+28:                __delay_ms(1000);
+3FE8  0E06     MOVLW 0x6
+3FEA  6E01     MOVWF __pcstackCOMRAM, ACCESS
+3FEC  0E30     MOVLW 0x30
+3FEE  2EE8     DECFSZ WREG, F, ACCESS
+3FF0  D7FE     BRA 0x3FEE
+3FF2  2E01     DECFSZ __pcstackCOMRAM, F, ACCESS
+3FF4  D7FC     BRA 0x3FEE
+3FF6  D000     BRA 0x3FF8
+29:                int counter = 0;
+30:                int prev = 1;
+31:                
+32:                //endless loop
+33:                while(1) {
+34:                    //PORTD = ~PORTB;
+35:                    if (PORTB & 0xFF != 0xFF && prev == 1) {
+36:                        counter++;
+37:                        prev = 0;
+38:                        PORTD = counter;
+39:                    }
+3FF8  EFFC     GOTO 0x3FF8
+3FFA  F01F     NOP
+3FFC  EF00     GOTO 0x0
+3FFE  F000     NOP
+40:                    
+41:                    
+42:                    
+43:                    
+44:                }
+45:            }
+---  C:/Users/xkrejci4/AppData/Local/Temp/xcAsak8.s  ----------------------------------------------------
+3FCC  0100     MOVLB 0x0
+3FCE  EFE9     GOTO 0x3FD2
